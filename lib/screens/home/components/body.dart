@@ -15,6 +15,11 @@ class Body extends StatelessWidget {
           child: Stack(
             children: [
               Container(
+                padding: EdgeInsets.only(
+                  left: kDefaultPadding,
+                  right: kDefaultPadding,
+                  bottom: 36 + kDefaultPadding,
+                ),
                 height: size.height * 0.2 - 27,
                 decoration: BoxDecoration(
                   color: kPrimaryColor,
@@ -22,6 +27,19 @@ class Body extends StatelessWidget {
                     bottomLeft: Radius.circular(36),
                     bottomRight: Radius.circular(36),
                   ),
+                ),
+                child: Row(
+                  children: [
+                    Text(
+                      "Hi Vishnu!",
+                      style: Theme.of(context).textTheme.headline5!.copyWith(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                    ),
+                    Spacer(),
+                    Image.asset("assets/images/logo.png"),
+                  ],
                 ),
               ),
               Positioned(
